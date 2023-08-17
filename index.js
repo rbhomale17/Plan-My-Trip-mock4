@@ -1,7 +1,9 @@
 const express = require('express');
 const connection = require('./backend/config/db');
 const travelRouter = require('./backend/routes/travel.routes');
+const CORS = require('cors')
 const app = express();
+app.use(CORS())
 require('dotenv').config();
 
 const port = process.env.port || 3001;
