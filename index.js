@@ -9,7 +9,11 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-    res.send({ msg: 'Welcome To Plan My Trip Backend Routes' })
+    res.send({
+        msg: 'Welcome To Plan My Trip Backend Routes',
+        name: 'Rushikesh Bhomale',
+        student_code: 'fw25_348'
+    })
 })
 
 app.use('/travel', travelRouter)
